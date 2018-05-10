@@ -1,0 +1,204 @@
+#! /usr/bin/python/
+
+#Multiline comments
+'''print("Hello \n
+sfds
+gf
+gfdg
+dfg
+df
+World");'''
+
+
+#raw text \n will print as \n
+print(r"""Hello \n 
+sfds
+gf
+gfdg
+dfg
+df
+World""");
+
+
+#! /usr/bin/python/
+
+x=10;
+y=20;
+z=x+y;
+print("The addition of ", x ," and ", y , " is ", z);
+
+x=y=z=10;
+print(" x = ",x);
+print(" y = ",y);
+print(" z = ",z);
+
+
+#str
+str =  "Hello World";
+
+print(" str = ",str);
+print(" str[0] = ",str[0]);
+print(" str[1] = ",str[1]);
+print(" str[-1] = ",str[-1]);
+print(" str[-2] = ",str[-2]);
+print(" str[2:4] = ",str[2:4]);
+print(" str[2:] = ",str[2:]);
+print(" str[2:-2] = ",str[2:-2]);
+print(" str*2 = ",str*2);
+print(" str+Test = ",str+"Test");
+
+#List
+
+list = [10,20,"Sumit",11.2,'c',-9,2.2]
+
+print(" list = ",list);
+print(" list[0] = ",list[0]);
+print(" list[1] = ",list[1]);
+print(" list[-1] = ",list[-1]);
+print(" list[-2] = ",list[-2]);
+print(" list[2:4] = ",list[2:4]);
+print(" list[2:] = ",list[2:]);
+print(" list*2 = ",list*2);
+list[2]=99;
+print(" list = ",list);
+
+#tuple
+
+tuple = (10,20,"Sumit",11.2,'c',-9,2.2)
+
+print(" tuple = ",tuple);
+print(" tuple[0] = ",tuple[0]);
+print(" tuple[1] = ",tuple[1]);
+print(" tuple[-1] = ",tuple[-1]);
+print(" tuple[-2] = ",tuple[-2]);
+print(" tuple[2:4] = ",tuple[2:4]);
+print(" tuple[2:] = ",tuple[2:]);
+print(" tuple*2 = ",tuple*2);
+print(" tuple = ",tuple);
+
+#dictionary
+
+dict = {11:"Sumit",23:"Sumana","xx":"Sachin",23:"Pooja"};
+
+print(" dict = ",dict);
+print(" dict[23] = ",dict[23]);
+print(" dict[xx] = ",dict["xx"]);
+
+
+#Taking input
+
+a = input("Enter First No");
+b = input("Enter Second No");
+a=int(a);
+b=int(b);
+c=a+b;
+print(" The addition is  = ",c);
+
+#if-else
+
+a = int(input("Enter First No"));
+b = int(input("Enter Second No"));
+
+if(a>b):
+   print("The Largest no is ",a);
+   print("The Largest no is ",a);
+else:
+   print("The Largest no is ",b);
+   print("The Largest no is ",b);
+
+#operator
+a = 44
+b = 9;
+
+print("a ",a);
+print("b ",b);
+print("a/b ",a/b);
+print("a//b ",a//b); #gives int
+
+a = 44.9
+b = 9.2;
+
+print("a ",a);
+print("b ",b);
+print("a/b ",a/b);
+print("a//b ",a//b);
+print("a//b ",5/4.0);
+print("5**2 ",5**2); # 5 to the power 2
+print("5^2 ",5^2); #Xor
+print("5%2 ",5%2);
+
+# & | ^ ~ << >> bitwise operator
+
+#1100
+#1010
+
+x = 12
+y = 10
+
+print("x & y ",x & y);
+print("x | y ",x | y);
+print("x ^ y ",x ^ y);
+
+x = 12
+y = 10
+
+print("~x ",~x);
+
+#logical operator and or not
+
+a = int(input("Enter First No"));
+b = int(input("Enter Second No"));
+c = int(input("Enter third No"));
+
+if(a>b and a>c):
+   print("The Largest no is ",a);
+elif(b>c):
+    print("The Largest no is ",b)
+else:
+    print("The Largest no is ",c)
+
+
+#identity operator
+
+a=10
+b=12;
+
+print(id(a));
+print(id(b));
+
+if (a is b):
+   print("a is b");
+else:
+   print("a is NOT b");
+
+#membership operator
+
+list=[10,20,"asd"]
+
+if(10 in list):
+    print("10 is 10")
+
+#control statements
+
+i=1;
+while(i<=10):
+   print(i);
+   i+=1;
+else:
+   print("I am in else");
+
+for i in range(1,10):
+    print(i);
+
+for i in range(1,11):
+   if(i%2==1):
+      print(i);
+else:
+   print("I am in else")
+
+
+for i in range(1,11):
+  print (i);
+  if(i>6):
+     break;
+  print (i);
