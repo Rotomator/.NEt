@@ -1,0 +1,54 @@
+DAY 1
+---------------------------------------
+---------------------------------------
+
+triple quotes allow multiple line print
+
+python is dynammically defined language
+
+Interpreted language
+
+
+Numeric datatypes---
+int long float complex
+10
+123123871267845125124
+123.12
+11+22j
+
+everything is a object
+
+String---
+
+str = "hello world"
+str[0] = h
+str[-1] = d
+
+List---
+
+list[]
+
+Tuple---
+
+tuple()
+
+readonly
+
+Dictionary---
+
+
+right shift dn divide by shifted to the number 120>>2 120/4 = 30
+
+Please go through the below links and code sample to understand more about actor-model implementation.
+
+
+https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-reliable-actors-introduction
+https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-reliable-actors-platform
+https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-reliable-actors-events
+
+
+Code Example: https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-reliable-actors-get-started
+https://blogs.msdn.microsoft.com/softwaresimian/2017/06/16/azure-service-fabric-application-insights-working-sample/
+
+https://github.com/Azure/coco-framework
+
