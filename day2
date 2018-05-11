@@ -1,0 +1,357 @@
+#Function :- InBuilt -- Numeric
+import math
+print(round(194.2973,2));
+print(round(4.5));
+print(round(4.9));
+
+#Function :- InBuilt -- Numeric
+
+print(round(194.2973,2));
+print(round(194.2973,1));
+print(round(194.2973,3));
+print(round(194.2973,-1));
+print(round(194.2973,-2));
+print(round(194.2973,-3));
+print(round(794.2973,-3));
+
+#Function :- InBuilt -- Numeric
+
+print (math.ceil(3.9));
+print (math.ceil(3.5));
+print (math.ceil(3.1));
+
+
+print (math.floor(3.9));
+print (math.floor(3.5));
+print (math.floor(3.1));
+
+
+
+#deprecated
+#print(cmp(10,20))
+#print(cmp(20,20))
+#print(cmp(30,20))
+
+#Function :- InBuilt -- Numeric
+
+print (max(3.9,3,45,-9,0,11));
+print (math.exp(2));
+
+
+import random
+print(random.random())
+print(random.random()*100)
+print(random.randrange(1,10))
+
+#unicode
+print(u"Hello World")
+
+#list functions
+list = ['Sumit',1,11.2,1997,"Sumana"]
+
+print ("list[0] :",list[0]);
+print ("list[1:4] :",list[1:4]);
+print ("len(list) :",len(list));
+
+for i in range(0,len(list)):
+   print(list[i]);
+
+list[2]='Pooja'
+list.append("Sachin");
+
+#del list[3]
+#del list[2:5]
+#del list
+list.insert(2,"Sam");
+
+for i in list:
+   print (i);
+
+
+#! /usr/bin/python
+
+list = ['Sumit',1,11.2,1997,"Sumana"]
+
+
+print ("list[::1] :",list[::1]);
+print ("list[::2] :",list[::2]);
+print ("list[::3] :",list[::3]);
+
+print ("list[::1] :",list[::-1]);
+print ("list[::2] :",list[::-2]);
+print ("list[::3] :",list[::-3]);
+
+#all datatype should be same
+
+list = ['Sumit',"1","11.2","1997","Sumana"]
+
+print(list);
+list.reverse();
+print(list);
+
+#dict
+
+dict = {11:"Sumit",'pooja':453,11.2:'Sachin'}
+
+print(dict);
+dict[12]='Good';
+
+del dict;
+print(dict);
+
+dict = {11:"Sumit",'pooja':453,11.2:'Sachin'}
+
+print(dict);
+
+for i in dict.keys():
+   print(dict[i]);
+
+print(dict.values());
+
+#function
+
+def add():
+  x = input("Enter The First Number")
+  y = input("Enter The Second Number")
+  x=int(x)
+  y=int(y)
+  z=x+y
+  print("The addition is ",z);
+print("In Main ..Main Starts...");
+add();
+print("In Main ..Main Ends...");
+
+def swap(l2):
+  c=l2[0];
+  l2[0]=l2[1];
+  l2[1]=c;
+
+print("In Main ..Main Starts...");
+x = input("Enter The First Number")
+y = input("Enter The Second Number")
+x=int(x)
+y=int(y)
+l1=[x,y];
+print("Before swap x = ",l1[0]," and y = ",l1[1]);
+swap(l1);
+print("After swap x = ",l1[0]," and y = ",l1[1]);
+print("In Main ..Main Ends...");
+
+
+def swap(l2):
+  c=l2[0];
+  l2[0]=l2[1];
+  l2[1]=c;
+  return(c);
+
+print("In Main ..Main Starts...");
+x = input("Enter The First Number")
+y = input("Enter The Second Number")
+x=int(x)
+y=int(y)
+l1=[x,y];
+print("Before swap x = ",l1[0]," and y = ",l1[1]);
+c=swap(l1);
+print("After swap x = ",l1[0]," and y = ",l1[1]);
+print(c);
+print("In Main ..Main Ends...");
+
+def swap(l2):
+  c=l2[0];
+  l2[0]=l2[1];
+  l2[1]=c;
+  return(l2[0],l2[1]);
+
+print("In Main ..Main Starts...");
+x = input("Enter The First Number")
+y = input("Enter The Second Number")
+x=int(x)
+y=int(y)
+l1=[x,y];
+print("Before swap x = ",l1[0]," and y = ",l1[1]);
+c=swap(l1);
+print("After swap x = ",l1[0]," and y = ",l1[1]);
+print(c);
+print("In Main ..Main Ends...");
+
+#! /usr/bin/python
+
+def swap(l2):
+  c=l2[0];
+  l2[0]=l2[1];
+  l2[1]=c;
+  return([l2[0],l2[1]]);
+
+print("In Main ..Main Starts...");
+x = input("Enter The First Number")
+y = input("Enter The Second Number")
+x=int(x)
+y=int(y)
+l1=[x,y];
+print("Before swap x = ",l1[0]," and y = ",l1[1]);
+c=swap(l1);
+print("After swap x = ",l1[0]," and y = ",l1[1]);
+print(c);
+print("In Main ..Main Ends...");
+
+#! /usr/bin/python
+
+def add(str,int,flot):
+   str='new'
+   int=223
+   flot=34.44
+   return
+
+print("Main Starts ")
+add('new',22,44.9);
+add(flot=44.9,str='new',int=22);
+print("Main Ends ")
+
+
+#! /usr/bin/python
+
+def add(str,flot,int=0):
+   print("str",str);
+   print("int",int);
+   print("flot",flot);
+   return
+
+print("Main Starts ")
+add('new',44.9,22);
+add('new',44.9);
+#add(flot=44.9,str='new');
+print("Main Ends ")
+
+#! /usr/bin/python
+
+def add(str,flot=3.3,int=0):
+   print("str",str);
+   print("int",int);
+   print("flot",flot);
+   return
+
+print("Main Starts ")
+add('new',44.9,22);
+add('new',44.9);
+add('new');
+#add(flot=44.9,str='new');
+print("Main Ends ")
+
+#! /usr/bin/python
+
+def add(x,*val):
+   sum=0;
+   sum+=x;
+   for i in val:
+     sum = sum +i;
+   return sum
+
+print("Main Starts ")
+z=add(44.9,22);
+print("z = ",z);
+z=add(11,22,33,44);
+print("z = ",z);
+z=add(11);
+print("z = ",z);
+print("Main Ends ")
+
+#! /usr/bin/python
+
+multi = lambda a,b : a*b
+
+
+print ("The Multiplication is ",multi(10,20))
+x=multi(8,3)
+print ("The Multiplication is ",x)
+
+
+#! /usr/bin/python
+
+def sample():
+   #x = 20
+   global x;
+   x += 1;
+   print ("X in Function",x);
+
+print ("Main Starts");
+x=10
+sample()
+print ("X in Main",x);
+print ("Main Ends");
+
+#Maths.py
+def add(a,b):
+    c=a+b;
+    print("In Maths Module");
+    print("The Addition is ",c);
+    return c;
+def sub(a,b):
+    c=a-b;
+    print("In Maths Module");
+    print("The Subtraction is ",c);
+    return c;
+#Main:
+#! /usr/bin/python
+
+#import Maths;
+
+print("In Main");
+#c=Maths.add(10,20);
+print("The addition is ",c);
+print("Main Ends...");
+
+# ! /usr/bin/python
+
+#from Maths import add;
+
+# import Maths;
+
+print("In Main");
+c = add(10, 20);
+print("The addition is ", c);
+# c=Maths.sub(10,20);
+# print("The Subtraction is ",c);
+print("Main Ends...");
+
+
+#! /usr/bin/python
+
+#import Maths;
+#from Maths import add;
+#from Maths import *;
+
+
+print("In Main");
+#c=Maths.add(10,20);
+print("The addition is ",c);
+c=sub(10,20);
+print("The Subtraction is ",c);
+print("Main Ends...");
+
+'''
+Addition.py
+def add(a,b):
+    c=a+b;
+    print("In Maths Module");
+    print("The Addition is ",c);
+    return c; 
+__init__.py
+from Arithematic import Addition
+from Arithematic import Subtraction
+from Arithematic import Division
+from Arithematic import Multiplication 
+main
+#! /usr/bin/python
+
+import Arithematic;
+
+
+
+print("In Main");
+c=Arithematic.Addition.add(10,20);
+print("The addition is ",c);
+c=Arithematic.Subtraction.sub(10,20);
+print("The Subtraction is ",c);
+print("Main Ends..."); 
+
+'''
