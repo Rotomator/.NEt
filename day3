@@ -1,0 +1,523 @@
+#! /usr/bin/python
+
+def div(a,b):
+   c=a/b
+   return (c)
+
+print("Main Starts ")
+x = input("Enter The First Number")
+y = input("Enter The Second Number")
+x=int(x)
+y=int(y)
+z=div(x,y)
+print("The division is ",z)
+print("Main Ends ")
+
+#! /usr/bin/python
+#assert
+def div(a,b):
+   assert b!=0, "Enter Valid Denominator"
+   c=a/b
+   return (c)
+
+print("Main Starts ")
+x = input("Enter The First Number")
+y = input("Enter The Second Number")
+x=int(x)
+y=int(y)
+z=div(x,y)
+print("The division is ",z)
+print("Main Ends ")
+
+
+#! /usr/bin/python
+
+def age_calc(a):
+   assert (a>0 and a<=120), "Enter Valid Age"
+   c=a/7.24*5;
+   return (c)
+
+print("Main Starts ")
+x = input("Enter The age ")
+x=int(x)
+z=age_calc(x)
+print("The cal is ",z)
+print("Main Ends ")
+
+#! /usr/bin/python
+#try catch
+def div(a,b):
+   c=a/b
+   return (c)
+
+print("Main Starts ")
+x = input("Enter The First Number")
+y = input("Enter The Second Number")
+try:
+   x=int(x)
+   y=int(y)
+   z=div(x,y)
+   print("The division is ",z)
+except ZeroDivisionError:
+   print ("Error : Enter The valid Denominator")
+print("Main Ends ")
+
+#generic catch
+#! /usr/bin/python
+
+def div(a,b):
+   c=a/b
+   return (c)
+
+print("Main Starts ")
+x = input("Enter The First Number")
+y = input("Enter The Second Number")
+try:
+   x=int(x)
+   y=int(y)
+   z=div(x,y)
+   print("The division is ",z)
+except ZeroDivisionError:
+   print ("Error : Enter The valid Denominator")
+except ValueError:
+   print ("Error : Enter Integers only")
+except:
+   print ("Error : Error in Code ")
+print("Main Ends ")
+
+#finally
+#! /usr/bin/python
+
+def div(a,b):
+   c=a/b
+   return (c)
+
+print("Main Starts ")
+x = input("Enter The First Number")
+y = input("Enter The Second Number")
+try:
+   x=int(x)
+   y=int(y)
+   z=div(x,y)
+   print("The division is ",z)
+except ZeroDivisionError:
+   print ("Error : Enter The valid Denominator")
+except ValueError:
+   print ("Error : Enter Integers only")
+except:
+   print ("Error : Error in Code ")
+finally:
+   print ("I am in Finally Block ")
+print("Main Ends ")
+
+#custom exception
+
+#! /usr/bin/python
+
+class CreditCardError(RuntimeError):
+   def __init__(self,arg):
+      self.args = arg
+
+
+print("Main Starts ")
+x = input("Enter The CC Number Number")
+try:
+   x=int(x)
+   if (x==0):
+      raise CreditCardError("Enter Valid CC Number")
+   print("CC Accepted")
+except CreditCardError:
+   print ("CC Failure");
+finally:
+   print ("I am in Finally Block ")
+
+print("Main Ends ")
+
+#exception propagates
+
+def div(a,b):
+   try:
+      c=a/b
+   except ZeroDivisionError:
+      print ("Error : Enter The valid Denominator")
+      return 0
+   return (c)
+
+print("Main Starts ")
+x = input("Enter The First Number")
+y = input("Enter The Second Number")
+try:
+   x=int(x)
+   y=int(y)
+   z=div(x,y)
+   print("The division is ",z)
+except ZeroDivisionError:
+   print ("Error : Enter The valid Denominator")
+finally:
+   print ("I am in Finally Block ")
+
+print("Main Ends ")
+
+#! /usr/bin/python
+
+def div(a,b):
+   try:
+      c=a/b
+   except ZeroDivisionError:
+      print ("Error : in Subroutine")
+      return 0
+   return (c)
+
+print("Main Starts ")
+x = input("Enter The First Number")
+y = input("Enter The Second Number")
+try:
+   x=int(x)
+   y=int(y)
+   try:
+      z=div(x,y)
+   except ZeroDivisionError:
+      print ("Exception in Inner Block")
+   print("The division is ",z)
+except:
+   print ("Exception in Outer Block")
+finally:
+   print ("I am in Finally Block ")
+
+print("Main Ends ")
+
+# CLASS
+
+#! /usr/bin/python
+
+class Rectangle:
+   def __init__(self,length,breadth):
+       self.l=length;
+       self.b=breadth;
+   def Area(self):
+       return(self.l*self.b);
+   def Perimeter(self):
+       return(2*(self.l+self.b));
+   def Display(self):
+       print("The Length is %d and Breadth is %d"%(self.l,self.b));
+
+
+
+print("Main Starts ")
+rect1=Rectangle(10,20);
+rect1.Display();
+print("The area is ",rect1.Area());
+print("The Perimeter is ",rect1.Perimeter());
+print("Main Ends ")
+
+#private variable
+#! /usr/bin/python
+
+class Rectangle:
+   def __init__(self,length,breadth):
+       self.__l=length;
+       self.b=breadth;
+   def Area(self):
+       return(self.__l*self.b);
+   def Perimeter(self):
+       return(2*(self.__l+self.b));
+   def Display(self):
+       print("The Length is %d and Breadth is %d"%(self.__l,self.b));
+
+
+
+print("Main Starts ")
+rect1=Rectangle(10,20);
+rect1.Display();
+print("The area is ",rect1.Area());
+print("The Perimeter is ",rect1.Perimeter());
+#print("The Length is %d and Breadth is %d"%(rect1.__l,rect1.b));
+print("Main Ends ")
+
+#static
+#! /usr/bin/python
+
+class Rectangle:
+   count=0;
+   def __init__(self,length,breadth):
+       self.__l=length;
+       self.b=breadth;
+       Rectangle.count=Rectangle.count+1;
+   def Area(self):
+       return(self.__l*self.b);
+   def Perimeter(self):
+       return(2*(self.__l+self.b));
+   def Display(self):
+       print("The Length is %d and Breadth is %d"%(self.__l,self.b));
+
+
+
+print("Main Starts ")
+
+print("The count =  ",Rectangle.count);
+
+rect1=Rectangle(10,20);
+rect1.Display();
+print("The area is ",rect1.Area());
+print("The Perimeter is ",rect1.Perimeter());
+
+print("The count =  ",Rectangle.count);
+
+rect2=Rectangle(11,22);
+rect2.Display();
+print("The area is ",rect2.Area());
+print("The Perimeter is ",rect2.Perimeter());
+
+print("The count =  ",Rectangle.count);
+
+print("Main Ends ")
+
+# function and constructor overloading not possible
+
+#inheritance
+
+#! /usr/bin/python
+
+class Rectangle:
+   'Class to Create Rectangle'
+   def __init__(self,length,breadth):
+      self.l=int(length)
+      self.b=int(breadth)
+      print ("I am in Constructor of Rectangle")
+   def Area(self):
+      return (self.l*self.b);
+   def Perimeter(self):
+      return (2*(self.l+self.b));
+   def Display(self):
+      print("The Length %d and Breadth %d "%(self.l,self.b));
+   def __del__(self):
+      print ("I am in Destructor of Rectangle")
+
+class Cuboid(Rectangle):
+   'Class to Create Cuboid'
+   def __init__(self,length,breadth,height):
+      self.l=int(length)
+      self.b=int(breadth)
+      #Rectangle.__init__(self,length,breadth);
+      self.h=int(height)
+      print ("I am in Constructor of Cuboid")
+   def volume(self):
+      return (self.l*self.b*self.h);
+   def Display1(self):
+      print("The L= %d  B= %d c= %d"%(self.l,self.b,self.h));
+   def __del__(self):
+      print ("I am in Destructor of Cuboid")
+
+
+print("Main Starts ")
+rect1 = Rectangle(10,20);
+rect1.Display();
+print ("The area is ",rect1.Area());
+print ("The Perimeter is ",rect1.Perimeter());
+
+cub1= Cuboid(11,22,33);
+cub1.Display();
+print ("The area is ",cub1.Area());
+print ("The Perimeter is ",cub1.Perimeter());
+print ("The volume is ",cub1.volume());
+cub1.Display1();
+print("Main Ends")
+
+#function overriding
+
+#! /usr/bin/python
+
+class Rectangle:
+   'Class to Create Rectangle'
+   def __init__(self):
+      self.l=0
+      self.b=0
+      print ("I am in Constructor of Rectangle")
+   def __init__(self,length,breadth):
+      self.l=int(length)
+      self.b=int(breadth)
+      print ("I am in Constructor of Rectangle")
+   def Area(self):
+      return (self.l*self.b);
+   def Perimeter(self):
+      return (2*(self.l+self.b));
+   def Display(self):
+      print("The Length %d and Breadth %d "%(self.l,self.b));
+   def __del__(self):
+      print ("I am in Destructor of Rectangle")
+
+class Cuboid(Rectangle):
+   'Class to Create Cuboid'
+   def __init__(self,length,breadth,height):
+      self.l=int(length)
+      self.b=int(breadth)
+      self.h=int(height)
+      print ("I am in Constructor of Cuboid")
+   def volume(self):
+      return (self.l*self.b*self.h);
+   def Display(self):
+      print("The L= %d  B= %d c= %d"%(self.l,self.b,self.h));
+   def __del__(self):
+      print ("I am in Destructor of Cuboid")
+
+
+print("Main Starts ")
+
+cub1= Cuboid(11,22,33);
+cub1.Display();
+print ("The area is ",cub1.Area());
+print ("The Perimeter is ",cub1.Perimeter());
+print ("The volume is ",cub1.volume());
+cub1.Display();
+cub1.Display();
+print("Main Ends")
+
+#! /usr/bin/python
+
+class Rectangle:
+   'Class to Create Rectangle'
+   def __init__(self):
+      self.l=0
+      self.b=0
+      print ("I am in Constructor of Rectangle")
+   def __init__(self,length,breadth):
+      self.l=int(length)
+      self.b=int(breadth)
+      print ("I am in Constructor of Rectangle")
+   def Area(self):
+      return (self.l*self.b);
+   def Perimeter(self):
+      return (2*(self.l+self.b));
+   def Display(self):
+      print("The Length %d and Breadth %d "%(self.l,self.b));
+   def add(self, r2):
+      temp = Rectangle(0,0);
+      temp.l=self.l+r2.l;
+      temp.b=self.b+r2.b;
+      return (temp);
+   def __del__(self):
+      print ("I am in Destructor of Rectangle")
+
+
+print("Main Starts ")
+
+rect1 = Rectangle(10,20);
+rect2 = Rectangle(30,40);
+rect1.Display();
+print ("The area is ",rect1.Area());
+#rect1 = rect1 + rect2;
+rect1=rect1.add(rect2);
+rect1.Display();
+print("Main Ends")
+
+#Regular Expression
+
+import re
+
+line = 'L AND D of Cpagemin is in M6, Airoli,Mumbai,Maharashtra'
+
+matchobj = re.match('(.*)Cpagemin(.*)',line);
+
+print (matchobj);
+print (matchobj.group());
+print (matchobj.group(1));
+print (matchobj.group(2));
+
+
+#greedy
+import re
+
+line = 'L AND D of Cpagemin is in M6, Airoli,Mumbai,Maharashtra'
+
+matchobj = re.match('(.*),(.*)',line);
+
+print (matchobj);
+print (matchobj.group());
+print (matchobj.group(1));
+print (matchobj.group(2));
+
+#noGreedy
+import re
+
+line = 'L AND D of Cpagemin is in M6, Airoli,Mumbai,Maharashtra'
+
+matchobj = re.match('(.*?),(.*)',line);
+
+print (matchobj);
+print (matchobj.group());
+print (matchobj.group(1));
+print (matchobj.group(2));
+
+
+#search
+#! /usr/bin/python
+
+import re
+
+line = 'L AND D of Cpagemin is in M6, Airoli,Mumbai,Maharashtra'
+
+matchobj = re.search('AND(.*?),(.*)',line);
+
+#print (matchobj);
+#print (matchobj.group());
+print (matchobj.group(1));
+print (matchobj.group(2));
+
+#ignore case
+
+#! /usr/bin/python
+
+import re
+
+line = 'L AND D of Cpagemin is in M6, Airoli,Mumbai,Maharashtra'
+
+matchobj = re.search('and(.*?),(.*)',line,re.I);
+
+#print (matchobj);
+#print (matchobj.group());
+print (matchobj.group(1));
+print (matchobj.group(2))
+
+#Sub
+
+#! /usr/bin/python
+
+import re
+
+line = '99-6703-4563 #My Email Id amit.sali@capgemini.com'
+
+result = re.sub("#.*$","",line);
+
+print (result);
+
+#\D non digit
+
+#! /usr/bin/python
+
+import re
+
+line = '99-6703-4563 #My Email Id amit.sali@capgemini.com'
+
+result = re.sub(r"#.*$","",line);
+
+print (result);
+
+result = re.sub("\D","",result);
+
+print (result);
+
+'''
+^ : Starts with
+$ : end with 
+[0-9] : one digit
+[^0-9] : Anything other than digit
+x+ : 1 or more
+x? :  0 or 1
+x* : o or more
+[Cap|cap|CAP] :
+m{3} : Exactly 3 times "m" shold be there mmmm mmmmmmmm
+m{3,} : 3 or more times
+m{3,7} : min 3 max 7 times 
+\D : Non Digit Char
+\d : digit char  
+'''
